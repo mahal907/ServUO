@@ -14,7 +14,7 @@ namespace Server.Services.Custom
         {
             CommandSystem.Register("Fuck", AccessLevel.Player, e =>
             {
-                Console.WriteLine("[+] " + e.ArgString);
+                //Console.WriteLine("[+] " + e.ArgString);
 
                 if (!int.TryParse(e.ArgString, out int spellID))
                 {

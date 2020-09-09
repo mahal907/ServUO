@@ -25,12 +25,21 @@ namespace Server.Items.Custom
                 // 技能全满
                 for (int i = 0; i <= (int)SkillName.Throwing; i++)
                 {
-                    from.Skills[i].Base = 120;
+                    from.Skills[i].Base = 200;
                 }
 
                 from.RawStr = 200;
                 from.RawDex = 200;
                 from.RawInt = 200;
+
+
+                // 道具
+                {
+                    Robe robe = new Robe();
+                    robe.Attributes.CastRecovery = 100;
+                    robe.Attributes.CastSpeed = 100;
+                    from.AddToBackpack(robe);
+                }
             }
         }
 
